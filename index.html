@@ -8,29 +8,42 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0; /* Color de fondo para toda la página */
     }
-    /* Estilo para centrar el contenido en PCs y dispositivos móviles */
+    /* Estilo para el contenedor central */
     #contenedor {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100%;
-      background-color: #f0f0f0; /* Color de fondo a los lados del contenido */
     }
     #hidden {
       display: none;
       text-align: center;
+      font-size: 1.2em; /* Tamaño del texto aumentado para mejor visibilidad */
     }
     #borde {
       text-align: center;
-      padding: 20px;
+      width: 100%; /* Ocupa todo el ancho */
+      height: 100%; /* Ocupa todo el alto */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       border: 3px solid black; /* Borde alrededor del contenido */
-      margin: 20px;
       background-color: #ffffff; /* Fondo del contenido */
     }
+    h1 {
+      font-size: 2.5em; /* Título más grande */
+    }
+    p {
+      font-size: 1.5em; /* Párrafo más grande */
+    }
     button {
+      font-size: 1.2em; /* Texto del botón más grande */
+      padding: 10px 20px; /* Más espacio dentro del botón */
       margin-top: 20px;
     }
   </style>
@@ -53,7 +66,11 @@
   <script>
     // JavaScript para manejar el click del botón y mostrar el contenido oculto
     document.getElementById('sorpresa').addEventListener('click', function() {
-      document.getElementById('hidden').style.display = 'block'; // Muestra el div oculto
+      document.getElementById('hidden').style.display = 'flex'; // Muestra el div oculto
+      document.getElementById('hidden').style.flexDirection = 'column'; // Alinea los elementos del div oculto
+      document.getElementById('hidden').style.justifyContent = 'center'; // Centra los elementos del div oculto
+      document.getElementById('hidden').style.alignItems = 'center'; // Centra los elementos del div oculto
+      document.getElementById('hidden').style.height = '100%'; // Asegura que el div oculto ocupe todo el alto
       document.getElementById('borde').style.display = 'none'; // Oculta el contenido inicial
     });
   </script>
