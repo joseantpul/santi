@@ -1,19 +1,61 @@
 <!doctype html>
 <html>
-  <head>
-    <title>santi ;)</title>
-  </head>
-  <body>ç
+<head>
+  <title>santi ;)</title>
+  <style>
+    /* Estilos generales */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    /* Estilo para centrar el contenido en PCs y dispositivos móviles */
+    #contenedor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background-color: #f0f0f0; /* Color de fondo a los lados del contenido */
+    }
+    #hidden {
+      display: none;
+      text-align: center;
+    }
+    #borde {
+      text-align: center;
+      padding: 20px;
+      border: 3px solid black; /* Borde alrededor del contenido */
+      margin: 20px;
+      background-color: #ffffff; /* Fondo del contenido */
+    }
+    button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="contenedor">
     <div id="hidden">
       <h1>¿Quieres ser mi padrino?</h1>
       <p>Envia tu respuesta a la persona que te hizo llegar este mensaje ;)</p>
     </div>
     <div id="borde">
-      <h1> Bienvenido a santi punto com </h1>
-    <div/>
-    <p>Un espacio dedicado al mayor gordito de la residencia</p>
-    <img src="./burguer.png">
-    <img src="./pizza.png">
-    <button type="button">Click aquí para una sorpresa</button>
-  </body>
+      <h1> Bienvenido a santi.com </h1>
+      <p>Un espacio dedicado al mayor gordito de la residencia</p>
+      <img src="./burguer.png" alt="Imagen de una hamburguesa">
+      <img src="./pizza.png" alt="Imagen de una pizza">
+      <button type="button" id="sorpresa">Click aquí para una sorpresa</button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript para manejar el click del botón y mostrar el contenido oculto
+    document.getElementById('sorpresa').addEventListener('click', function() {
+      document.getElementById('hidden').style.display = 'block'; // Muestra el div oculto
+      document.getElementById('borde').style.display = 'none'; // Oculta el contenido inicial
+    });
+  </script>
+</body>
 </html>
