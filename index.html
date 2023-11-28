@@ -72,7 +72,7 @@
       <button type="button" id="sorpresa">Click aquí para una sorpresa</button>
     </div>
   </div>
-
+  <audio id="boton-sound" src="./riff.mp3" preload="auto"></audio>
   <script>
     // JavaScript para manejar el click del botón y mostrar el contenido oculto
     document.getElementById('sorpresa').addEventListener('click', function() {
@@ -82,6 +82,8 @@
       document.getElementById('hidden').style.alignItems = 'center'; // Centra los elementos del div oculto
       document.getElementById('hidden').style.height = '100%'; // Asegura que el div oculto ocupe todo el alto
       document.getElementById('borde').style.display = 'none'; // Oculta el contenido inicial
+      var sound = document.getElementById('boton-sound');
+      sound.play();
     });
   </script>
 </body>
