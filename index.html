@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html>
 <head>
   <title>santi ;)</title>
@@ -47,6 +46,14 @@
       padding: 10px 20px; /* Más espacio dentro del botón */
       margin-top: 20px;
     }
+    /* Nuevo estilo para las imágenes */
+    .imagenes {
+      display: flex; /* Alineación horizontal de las imágenes */
+      justify-content: center; /* Centrar imágenes horizontalmente */
+    }
+    .imagenes img {
+      margin: 0 10px; /* Espacio entre imágenes */
+    }
   </style>
 </head>
 <body>
@@ -58,8 +65,10 @@
     <div id="borde">
       <h1> Bienvenido a santi.com </h1>
       <p>Un espacio dedicado al mayor gordito de la residencia</p>
-      <img src="./burguer.jpg" alt="Imagen de una hamburguesa" width="80" height="80">
-      <img src="./pizza.avif" alt="Imagen de una pizza" width="80" height="80>
+      <div class="imagenes"> <!-- Contenedor para las imágenes -->
+        <img src="./burguer.jpg" alt="Imagen de una hamburguesa" width="80" height="80">
+        <img src="./pizza.avif" alt="Imagen de una pizza" width="80" height="80">
+      </div>
       <button type="button" id="sorpresa">Click aquí para una sorpresa</button>
     </div>
   </div>
